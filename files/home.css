@@ -18,8 +18,8 @@
 
 #credits {
     position: relative;
-    top : 95vh;
-    text-align:center;
+    top: 90vh;
+    text-align: center;
 }
 
 #title {
@@ -54,4 +54,10 @@
 
 body {
     overflow-x: hidden;
+}
+#text {
+    color: black;
+    position: relative;
+    top: 20vh;
+    text-align: center;
 }

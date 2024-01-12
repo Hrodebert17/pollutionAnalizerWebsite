@@ -4,9 +4,9 @@ window.onload = function main()
     const MENU_BUTTON = document.getElementById("menu-button");
     const HOME_BUTTON = document.getElementById("home-button");
     const HIDDEN_MENU = document.getElementById("hidden-lateral-menu");
+    const CREDITS = document.getElementById("credits");
     HIDDEN_MENU.style.opacity = 0;
     HIDDEN_MENU.style.left = "100vw";
-    let menuAngle = 0;
     MENU_BUTTON.onclick = function menuButtonOnClick() {
         if (menuAngle == 0) {
             menuAngle = 90;

@@ -4,6 +4,6 @@
 int main() {
     crow::SimpleApp app{};
     registerPages(app);
-    app.multithreaded().run();
+    app.multithreaded().port(1080).run();
     return 0;
 }
