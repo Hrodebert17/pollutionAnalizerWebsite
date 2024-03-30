@@ -1,0 +1,60 @@
+
+#menu-high {
+    width: 100vw;
+    height: 15vh;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color:#0B2349;
+}
+
+#menu-button {
+    width: 3vw;
+    position:absolute;
+    top: 2.3vw;
+    left: 3vw;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+#credits {
+    position: relative;
+    top: 90vh;
+    text-align: center;
+}
+
+#title {
+    font-size:7vh;
+    text-align: left;
+    position: relative;
+    font-family:Poppins;
+    top: -2.4vh;
+    left: 15vh;
+    color: white;
+}
+
+#hidden-lateral-menu {
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #075971
+}
+
+#hidden-lateral-menu img {
+    filter: invert(1);
+    width: 5vw;
+}
+body {
+    overflow-x: hidden;
+}
+#text {
+    color: black;
+    position: relative;
+    top: 20vh;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
