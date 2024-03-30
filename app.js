@@ -1,14 +1,21 @@
+// importiamo i moduli necessari
 const http = require('http')
 const file_system = require('fs');
+// creiamo la variabile port come una costante
 const port = 8000
 
-console.log("defined the server.")
-
+console.log("defining the server.") // diciamo all'utente che il server sta venendo definito
+// definiamo il server
 const server = http.createServer((request,response) => {
+    // salviamo la richiesta in una variabile
     let page = request.url  
 
+    // avvertiamo l'utente in console che è stata ricevuta una richesta per una pagina
+    console.log("recived a request for: " + page)
+
+    // gestiamo la richiesta in base a cosa contiene 
     if ( page === "/" || page === "/home" ) {
-            file_system.readFile("./assets/home.html",function(error,html) {
+        file_system.readFile("./assets/home.html",function(error,html) {
             response.statusCode = 200
             response.setHeader("Content-Type", "text/html")
             response.write(html)
@@ -66,11 +73,16 @@ const server = http.createServer((request,response) => {
         return
     }  
 
+    // se nessuna pagina con quel nome esiste gti mandiamo una risposta con status code 404 (page not found)
     response.statusCode = 404;
     response.write("404, page not found!")
     response.end();
 })
 
+// avvertiamo l'utente che il server è stato definito
+console.log("the server was defined.")
+// diciamo al server di ascoltare per eventuali richieste tramite la porta definita prima
 server.listen(port);
 
+// avvertiamo l'utente che il server è pronto per l'uso
 console.log("listening on port " + port)
