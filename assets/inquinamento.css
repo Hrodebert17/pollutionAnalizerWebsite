@@ -18,9 +18,7 @@
     color:white;
     font-size:4vh;
     font-family:Poppins;
-    cursor:pointer;
-    display:flex;
-    align-items: center;
+    cursor:pointer
 }
 
 #menu-button {

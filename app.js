@@ -11,7 +11,7 @@ const server = http.createServer((request,response) => {
     let page = request.url  
 
     // avvertiamo l'utente in console che è stata ricevuta una richesta per una pagina
-    console.log("recived a request for: " + page)
+    console.log("recived a request for: " + page+ "from " + request.socket.remoteAddress)
 
     // gestiamo la richiesta in base a cosa contiene 
     if ( page === "/" || page === "/home" ) {
@@ -43,6 +43,52 @@ const server = http.createServer((request,response) => {
         })
         return
     }  
+    if (page === "/inquinamento" ) {
+        file_system.readFile("./assets/inquinamento.html",function(error,html) {
+            response.statusCode = 200
+            response.setHeader("Content-Type", "text/html")
+            response.write(html)
+            response.end();
+        })
+        return
+    } 
+    if (page === "/sostanze_inquinanti" ) {
+        file_system.readFile("./assets/sostanze_inquinanti.html",function(error,html) {
+            response.statusCode = 200
+            response.setHeader("Content-Type", "text/html")
+            response.write(html)
+            response.end();
+        })
+        return
+    } 
+    if (page === "/effetti" ) {
+        file_system.readFile("./assets/effetti.html",function(error,html) {
+            response.statusCode = 200
+            response.setHeader("Content-Type", "text/html")
+            response.write(html)
+            response.end();
+        })
+        return
+    } 
+    if (page === "/sitografia" ) {
+        file_system.readFile("./assets/sitorafia.html",function(error,html) {
+            response.statusCode = 200
+            response.setHeader("Content-Type", "text/html")
+            response.write(html)
+            response.end();
+        })
+        return
+    } 
+    else
+    if (page === "/inquinamento1.png" ) {
+        file_system.readFile("./assets/inquinamento1.png",function(error,html) {
+            response.statusCode = 200
+            response.setHeader("Content-Type", "image/png")
+            response.write(html)
+            response.end();
+        })
+        return
+    } 
     else
     if ( page === "/img/home_icon.png") {
         file_system.readFile("./assets/home_icon.png",function(error,html) {

@@ -8,31 +8,6 @@ window.onload = function main()
     HIDDEN_MENU.style.opacity = 0;
     HIDDEN_MENU.style.left = "100vw";
     let menuAngle = 0;
-    document.getElementById("introduzione").onclick = function introduzioneOnClick() {
-        if (document.getElementById("introduzione").style.cursor === "pointer") {
-            window.location.href = "/"
-        }
-    }
-    document.getElementById("inquinamento").onclick = function inquinamentoOnClick() {
-        if (document.getElementById("inquinamento").style.cursor === "pointer") {
-            window.location.href = "/inquinamento"
-        }
-    }
-    document.getElementById("sostanze_inquinanti").onclick = function sostanzeOnClick() {
-        if (document.getElementById("sostanze_inquinanti").style.cursor === "pointer") {
-            window.location.href = "/sostanze_inquinanti"
-        }
-    }
-    document.getElementById("effetti").onclick = function effettiOnClick() {
-        if (document.getElementById("effetti").style.cursor === "pointer") {
-            window.location.href = "/effetti"
-        }
-    }
-    document.getElementById("sitorafia").onclick = function sitografiaOnClick() {
-        if (document.getElementById("sitorafia").style.cursor === "pointer") {
-            window.location.href = "/sitografia"
-        }
-    }
     Array.from(BUTTONS).forEach(function(element) {
         element.style.cursor = "default"
     })
